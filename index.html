@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>In Mind</title>
+	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+	<link rel="import" href="elements.html">
+	<link rel="stylesheet" href="styles/app.css">
+</head>
+<body fullbleed layout vertical>
+	<core-drawer-panel>
+	  <core-header-panel drawer>
+	    <core-toolbar>Menu</core-toolbar>
+		<core-menu>
+		  <core-item label="One"></core-item>
+		  <core-item label="Two"></core-item>
+		</core-menu>
+	  </core-header-panel>
+	  <core-header-panel main>
+	    <core-toolbar>
+	      <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+	      <div>My App</div>
+	    </core-toolbar>
+	    <div></div>
+	  </core-header-panel>
+	</core-drawer-panel>
+</body>
+</html>

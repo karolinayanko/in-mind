@@ -1,0 +1,6 @@
+core-header-panel[main]{
+	background: grey;
+}
+core-header-panel[drawer]{
+	background: white;
+}
