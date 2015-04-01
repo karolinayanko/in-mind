@@ -10,22 +10,29 @@
 	<link rel="import" href="elements.html">
 	<link rel="stylesheet" href="styles/app.css">
 </head>
-<body fullbleed layout vertical>
-	<core-drawer-panel>
-	  <core-header-panel drawer>
-	    <core-toolbar>Menu</core-toolbar>
-		<core-menu>
-		  <core-item label="One"></core-item>
-		  <core-item label="Two"></core-item>
-		</core-menu>
-	  </core-header-panel>
-	  <core-header-panel main>
-	    <core-toolbar>
-	      <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
-	      <div>My App</div>
+<body fullbleed fit layout vertical>
+	<core-scaffold>
+	  <core-header-panel navigation flex mode="seamed">
+	    <core-toolbar class="tall">
+	    	<div class="bottom">Demo User</div>
 	    </core-toolbar>
-	    <div></div>
+	    <core-menu>
+	      <core-item icon="settings" label="item1"></core-item>
+	      <core-item icon="settings" label="item2"></core-item>
+	    </core-menu>
 	  </core-header-panel>
-	</core-drawer-panel>
+	  <!-- <div tool>
+	  	<div>In Mind</div>
+			<span flex tool></span>
+	  	<paper-icon-button icon="search" tool></paper-icon-button>
+	  </div> -->
+	  <div id="div" tool>Title</div> <span flex tool></span>
+    <paper-icon-button icon="search" id="paper_icon_button" tool></paper-icon-button>
+    <paper-icon-button icon="more-vert" id="paper_icon_button" tool></paper-icon-button>
+	  <!-- <core-toolbar>
+		</core-toolbar> -->
+	  <div fit></div>
+	</core-scaffold>
+	<script src="app.js"></script>
 </body>
 </html>

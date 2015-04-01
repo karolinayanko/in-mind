@@ -1,6 +1,3 @@
-core-header-panel[main]{
-	background: grey;
-}
-core-header-panel[drawer]{
-	background: white;
+body{
+	font-family: Roboto, 'Helvetica', sans-serif;
 }

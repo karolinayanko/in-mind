@@ -15,5 +15,7 @@
     "background": {
       "scripts": ["background.js"]
     }
-  }
+  },
+
+  "offline_enabled": true
 }
