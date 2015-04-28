@@ -1,0 +1,16 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+
+
+<polymer-element name="data-service" attributes="datas">
+	<template>
+		<style>
+			:host {
+				display: none;
+			}
+		</style>
+		<core-ajax id="userData" url="/api/user-data.json" on-core-response="{{datasLoaded}}" handleas="json" on-core-error="{{requestFailed}}" auto>
+	    </core-ajax>
+	</template>
+	<script src="data-service.html.0.js"></script>
+</polymer-element>

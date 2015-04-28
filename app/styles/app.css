@@ -1,0 +1,15 @@
+*{
+	outline: none;
+}
+body{
+	font-family: Roboto, 'Helvetica', sans-serif;
+}
+paper-item{
+	display: block;
+	margin: 10px 10px;
+}
+.create-item{
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}

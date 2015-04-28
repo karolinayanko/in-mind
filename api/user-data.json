@@ -2,35 +2,41 @@
 	"header": "tit",
 	"content": "con",
 	"labels": "lab",
-	"timestamp": "new Date().toISOString()"
+	"timestamp": "20.12.2015"
 },
 {
 	"header": "tit",
 	"content": "con",
 	"labels": "lab",
-	"timestamp": "new Date().toISOString()"
+	"timestamp": "20.12.2015"
+},
+{
+	"header": "Vitaliy",
+	"content": "Ruby",
+	"labels": "qa, betlab",
+	"timestamp": "20.12.2015"
 },
 {
 	"header": "tit",
 	"content": "con",
 	"labels": "lab",
-	"timestamp": "new Date().toISOString()"
+	"timestamp": "20.12.2015"
 },
 {
 	"header": "tit",
 	"content": "con",
 	"labels": "lab",
-	"timestamp": "new Date().toISOString()"
+	"timestamp": "20.12.2015"
 },
 {
 	"header": "tit",
 	"content": "con",
 	"labels": "lab",
-	"timestamp": "new Date().toISOString()"
+	"timestamp": "20.12.2015"
 },
 {
 	"header": "tit",
 	"content": "con",
 	"labels": "lab",
-	"timestamp": "new Date().toISOString()"
+	"timestamp": "20.12.2015"
 }]

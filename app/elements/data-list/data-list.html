@@ -1,4 +1,4 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="../data-service/data-service.html">
 <link rel="import" href="../data-card/data-card.html">
 
@@ -26,7 +26,7 @@
 					<p class="content">{{data.content}}</p>
 					<div>
 						<div class="labels">{{data.labels}}</div>
-						<time class="timestamp" is="relative-time" datetime="{{data.timestamp}}"></time>
+						<time class="timestamp" is="relative-time" datetime="{{data.timestamp}}">{{data.timestamp}}</time>
 					</div>
 				</data-card>
 			</template>

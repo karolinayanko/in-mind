@@ -6,7 +6,7 @@
  */
 chrome.app.runtime.onLaunched.addListener(function(launchData) {
   chrome.app.window.create(
-    'index.html',
+    'app/index.html',
     {
       id: 'in-mind',
       width: 360,

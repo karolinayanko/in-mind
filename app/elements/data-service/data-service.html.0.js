@@ -5,6 +5,10 @@
 		    },
 		    datasLoaded: function() {
 		      // Make a copy of the loaded data
-		      this.datas = this.$.ajax.response.slice(0);
+		      console.log('ok');
+		      this.datas = this.$.userData.response.slice(0);
+		    },
+		    requestFailed: function(){
+		    	console.log('error');
 		    }
 		});
