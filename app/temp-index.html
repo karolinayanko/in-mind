@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>In Mind</title>
+	<script src="index.html.0.js"></script>
+	<link rel="import" href="elements/elements.html">
+	<link rel="stylesheet" href="styles/app.css">
+</head>
+<body fullbleed="" fit="" layout="" vertical="">
+	<template is="auto-binding" id="homepage">
+		<core-scaffold>
+			<core-header-panel navigation="" flex="" mode="seamed">
+				<core-toolbar class="tall">
+					<div class="bottom">Demo User</div>
+				</core-toolbar>
+				<core-selector>
+					<!-- <paper-item tabindex="0">
+						<core-icon icon="view-agenda" role="img"></core-icon>
+						Item
+					</paper-item>
+					<paper-item tabindex="0">
+						<core-icon icon="view-list" role="img"></core-icon>
+						List
+					</paper-item>
+					<paper-item tabindex="0">
+						<core-icon icon="settings" role="img"></core-icon>
+						Settings
+					</paper-item> -->
+					<core-item icon="view-agenda">Item</core-item>
+					<core-item icon="view-list">List</core-item>
+					<core-item icon="settings">Settings</core-item>
+				</core-selector>
+			</core-header-panel>
+
+			<div id="div" tool="">InMind</div>
+			<span flex="" tool=""></span>
+			<paper-icon-button icon="search" id="paper_icon_button" tool=""></paper-icon-button>
+			<paper-icon-button icon="more-vert" id="paper_icon_button" tool=""></paper-icon-button>
+
+			<div fit="">
+				<data-list></data-list>
+				<paper-fab icon="add" class="red create-item" title="add" on-tap="{{addElement}}"></paper-fab>
+			</div>
+		</core-scaffold>
+
+	</template>
+	<script src="scripts/app.js"></script>
+
+</body></html>
