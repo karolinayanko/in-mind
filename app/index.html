@@ -10,24 +10,23 @@
 </head>
 <body unresolved>
 	<template id="app" is="auto-binding">
-
 		<!-- TODO: Structure of app -->
 		<core-animated-pages id="pages" selected="{{selected}}"
 												transitions="cross-fade fade-slide-up fade-scale" fit>
 
 			<section layout vertical>
-			<!-- 	<tasks-page class="page" id="tasks"
-										cross-fade?="{{largeScreen}}"
-										heading="{{heading}}"
-										flex>
-				</tasks-page> -->
+				<tasks-page class="page" id="tasks"
+							cross-fade?="{{largeScreen}}"
+							heading="{{heading}}"
+							flex>
+				</tasks-page>
 			</section>
 
 			<section layout vertical>
 				<!-- <task-info-page class="page" id="task-info"
-												cross-fade?="{{largeScreen}}"
-												fade-scale?="{{!largeScreen}}"
-												flex>
+								cross-fade?="{{largeScreen}}"
+								fade-scale?="{{!largeScreen}}"
+								flex>
 				</task-info-page> -->
 			</section>
 

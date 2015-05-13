@@ -1,0 +1,11 @@
+:host {
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: yellow;
+}
+.create-item{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
