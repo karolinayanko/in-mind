@@ -1,33 +1,20 @@
 <link rel="import" href="../base-page/base-page.html">
 <link rel="import" href="/app/elements/elements.html">
 
-<polymer-element name="tasks-page" attributes="datas">
+<polymer-element name="tasks-page" extends="base-page" attributes="datas">
 	<template>
 		<link rel="stylesheet" href="tasks-page.css">
 
 		<core-scaffold>
-			<core-header-panel mode="seamed">
-				<core-toolbar class="tall">
-					<div class="bottom">Demo User</div>
-				</core-toolbar>
-				<core-selector>
-					<!-- <paper-item tabindex="0">
-						<core-icon icon="view-agenda" role="img"></core-icon>
-						Item
-					</paper-item>
-					<paper-item tabindex="0">
-						<core-icon icon="view-list" role="img"></core-icon>
-						List
-					</paper-item>
-					<paper-item tabindex="0">
-						<core-icon icon="settings" role="img"></core-icon>
-						Settings
-					</paper-item> -->
-					<core-item icon="view-agenda">Item</core-item>
-					<core-item icon="view-list">List</core-item>
-					<core-item icon="settings">Settings</core-item>
-				</core-selector>
-			</core-header-panel>
+			<div vertical="" layout="" drawer="">
+				<core-header-panel mode="seamed" navigation flex>
+					<core-toolbar></core-toolbar>
+			      <core-menu>
+			        <core-item icon="settings" label="item1"></core-item>
+			        <core-item icon="settings" label="item2"></core-item>
+			      </core-menu>
+				</core-header-panel>
+			</div>
 
 			<div id="div" tool>InMind</div>
 			<span flex tool></span>
@@ -36,7 +23,7 @@
 
 			<div fit>
 				<data-list></data-list>
-				<paper-fab icon="add" class="red create-item" title="add" on-tap="{{addElement}}"></paper-fab>
+				<paper-fab icon="add" class="create-item" title="add" on-tap="{{addElement}}"></paper-fab>
 			</div>
 		</core-scaffold>
 	</template>

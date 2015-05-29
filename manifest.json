@@ -11,6 +11,8 @@
     "128": "assets/icon_128.png"
   },
 
+  "permissions": ["storage", "alarms", "notifications", "webview"],
+
   "app": {
     "background": {
       "scripts": ["background.js"]

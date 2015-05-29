@@ -1,18 +1,43 @@
-<html><head><link rel="import" href="/bower_components/polymer/polymer.html">
+<html><head>
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="../base-page/base-page.html">
 
-</head><body><polymer-element name="data-card">
+
+</head><body><polymer-element name="data-card" extends="base-page">
 	<template>
+
+		<link rel="stylesheet" href="data-card.css">
 		<style>
-			:host {
-				display: block;
-				width: 100%;
-				margin: 10px 0;
-				background: white;
+			.header {
+				margin: 0;
 			}
 		</style>
-		<content select="h2"></content>
-		<content select="p"></content>
-		<content></content>
+
+		<header>
+			<content select="h2"></content>
+		</header>
+
+		<core-icon-button
+      id="favicon"
+      icon="favorite"
+      on-tap="{{favoriteNote}}" >
+    </core-icon-button>
+
+		<section>
+			<content select="p"></content>
+		</section>
+
+		<footer>
+
+			<div class="label">
+				<content></content>
+			</div>
+
+			<content select="time"></content>
+
+		</footer>
+
+
 	</template>
 	<script src="data-card.html.0.js"></script>
 </polymer-element></body></html>

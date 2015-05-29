@@ -8,4 +8,12 @@
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
+	background-color: #FF5252;
+}
+
+core-header-panel{
+	height: 100%;
+}
+#headerPanel core-toolbar{
+	background-color: #0097A7;
 }

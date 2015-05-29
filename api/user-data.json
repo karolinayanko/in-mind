@@ -1,42 +1,56 @@
 [{
-	"header": "tit",
-	"content": "con",
-	"labels": "lab",
-	"timestamp": "20.12.2015"
+	"id": 1,
+	"header": "Note 2",
+	"contents": [
+		"Buy sugar",
+		"Buy eggs",
+		"Buy tea",
+		"Buy bacon"
+	],
+	"labels": [
+		"meal",
+		"shopping"
+	],
+	"timestamp": "20.12.2015",
+	"favorite": false
 },
 {
-	"header": "tit",
-	"content": "con",
-	"labels": "lab",
-	"timestamp": "20.12.2015"
+	"id": 2,
+	"header": "Note 3",
+	"contents": [
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, nemo!"
+	],
+	"labels": [
+		"remind",
+		"task",
+		"poem"
+	],
+	"timestamp": "20.12.2015",
+	"favorite": true
 },
 {
-	"header": "Vitaliy",
-	"content": "Ruby",
-	"labels": "qa, betlab",
-	"timestamp": "20.12.2015"
+	"id": 3,
+	"header": "",
+	"contents": [
+		"read book",
+		"watch 'Interstellar'"
+	],
+	"labels": [
+		"resting",
+		"book",
+		"films"
+	],
+	"timestamp": "",
+	"favorite": false
 },
 {
-	"header": "tit",
-	"content": "con",
-	"labels": "lab",
-	"timestamp": "20.12.2015"
-},
-{
-	"header": "tit",
-	"content": "con",
-	"labels": "lab",
-	"timestamp": "20.12.2015"
-},
-{
-	"header": "tit",
-	"content": "con",
-	"labels": "lab",
-	"timestamp": "20.12.2015"
-},
-{
-	"header": "tit",
-	"content": "con",
-	"labels": "lab",
-	"timestamp": "20.12.2015"
-}]
+	"id": 4,
+	"header": "Note 3",
+	"contents": [
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, delectus. Deserunt ab blanditiis pariatur corporis, ratione magnam tenetur optio consequuntur labore, deleniti vero iure cupiditate. Omnis, architecto dignissimos ipsum aspernatur illum aperiam aliquid incidunt, libero eius dicta animi quam quas voluptatem, iure praesentium officia a voluptas! Dicta, aliquid, debitis? Eveniet facilis ut ad, quasi, laboriosam commodi voluptatum mollitia quia maxime laborum eaque beatae? Vitae possimus corrupti doloremque ut aperiam accusantium. Quas enim explicabo aliquid iusto consectetur omnis alias cupiditate architecto vitae, nisi repellendus reiciendis at, quam officia, tempora iste aperiam tempore temporibus ab odit ullam excepturi facere. Fugit, rerum, eaque."
+	],
+	"labels": [],
+	"timestamp": "20.12.2015",
+	"favorite": false
+}
+]

@@ -1,7 +1,7 @@
 {
   "name": "in-mind",
-  "version": "0.0.0",
-  "description": "Task manager",
+  "version": "0.1.0",
+  "description": "Task manager chrome app on Polymer",
   "authors": [
     "Caroline Yanko"
   ],
@@ -17,6 +17,6 @@
   "dependencies": {
     "polymer": "Polymer/polymer#0.5.5",
     "paper-elements": "Polymer/paper-elements#0.5.5",
-    "core-scaffold": "Polymer/core-scaffold#~0.5.5"
+    "core-scaffold": "Polymer/core-scaffold#0.5.5"
   }
 }

@@ -9,7 +9,7 @@ chrome.app.runtime.onLaunched.addListener(function(launchData) {
     'app/index.html',
     {
       id: 'in-mind',
-      width: 360,
+      width: 560,
       height: 540,
       minWidth: 360,
       minHeight: 540
