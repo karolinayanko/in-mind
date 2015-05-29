@@ -1,8 +1,17 @@
+*,*::after,*::before {
+  box-sizing: border-box;
+}
+:host {
+  display: block;
+  background-color: white;
+}
+
 *{
 	outline: none;
 }
 body{
 	font-family: Roboto, 'Helvetica', sans-serif;
+	background: #e3e3e3;
 }
 paper-item{
 	display: block;

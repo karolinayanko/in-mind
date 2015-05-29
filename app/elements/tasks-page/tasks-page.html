@@ -1,31 +1,73 @@
-<link rel="import" href="../base-page/base-page.html">
+<html><head><link rel="import" href="../base-page/base-page.html">
 <link rel="import" href="/app/elements/elements.html">
 
-<polymer-element name="tasks-page" extends="base-page" attributes="datas">
+<link rel="import" href="/bower_components/core-menu/core-menu.html">
+<link rel="import" href="/bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="/bower_components/paper-dropdown/paper-dropdown.html">
+
+</head><body><polymer-element name="tasks-page" extends="base-page" attributes="datas">
 	<template>
 		<link rel="stylesheet" href="tasks-page.css">
 
-		<core-scaffold>
-			<div vertical="" layout="" drawer="">
-				<core-header-panel mode="seamed" navigation flex>
-					<core-toolbar></core-toolbar>
-			      <core-menu>
-			        <core-item icon="settings" label="item1"></core-item>
-			        <core-item icon="settings" label="item2"></core-item>
-			      </core-menu>
+		<core-drawer-panel id="drawerPanel" narrow="">
+
+			<!-- Drawer -->
+			<core-header-panel drawer="" mode="seamed">
+				<core-toolbar class="tall">
+					<span class="bottom">Demo User</span>
+				</core-toolbar>
+				<core-menu id="sideMenu" selected="all" on-core-select="{{handleTab}}">
+					<core-item noink=""  name="all">
+						<core-icon icon="assignment"></core-icon>
+							All notes
+					</core-item>
+					<core-item noink="" name="favorites">
+						<core-icon icon="favorite-outline"></core-icon>
+							Favorites
+					</core-item>
+				</core-menu>
+
+			</core-header-panel>
+
+			<!-- Main -->
+			<div main="" layout="" vertical="">
+				<core-header-panel id="headerPanel" mode="seamed" flex="">
+					<core-toolbar>
+						<paper-icon-button icon="menu" id="navicon" core-drawer-toggle="">
+						</paper-icon-button>
+						<div id="title" flex="">InMind</div>
+
+						<paper-menu-button id="menuBtn" noink="">
+							<paper-icon-button icon="more-vert" noink=""></paper-icon-button>
+							<paper-dropdown class="dropdown" halign="right">
+								<core-menu class="menu">
+									<paper-item>Settings</paper-item>
+									<paper-item>Help</paper-item>
+									<paper-item>Feedback</paper-item>
+								</core-menu>
+							</paper-dropdown>
+						</paper-menu-button>
+
+					</core-toolbar>
+					<div class="content">
+
+						<data-list id="dataList" show="all"></data-list>
+
+					</div>
 				</core-header-panel>
-			</div>
 
-			<div id="div" tool>InMind</div>
-			<span flex tool></span>
-			<paper-icon-button icon="search" id="paper_icon_button" tool=""></paper-icon-button>
-			<paper-icon-button icon="more-vert" id="paper_icon_button" tool=""></paper-icon-button>
+				<!-- Add contact -->
+					<paper-fab icon="add" noink="" on-tap="{{addNewNote}}">
 
-			<div fit>
-				<data-list></data-list>
-				<paper-fab icon="add" class="create-item" title="add" on-tap="{{addElement}}"></paper-fab>
+						</x-trigger>
+					</paper-fab>
 			</div>
-		</core-scaffold>
+		</core-drawer-panel>
 	</template>
 	<script src="tasks-page.html.0.js"></script>
 </polymer-element>
+
+
+
+
+</body></html>

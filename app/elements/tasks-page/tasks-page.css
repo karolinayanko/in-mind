@@ -2,18 +2,67 @@
 	display: block;
 	height: 100%;
 	width: 100%;
-	background: yellow;
-}
-.create-item{
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	background-color: #FF5252;
 }
 
 core-header-panel{
 	height: 100%;
+	background: white;
 }
-#headerPanel core-toolbar{
+core-toolbar{
 	background-color: #0097A7;
+	color: white;
+}
+
+core-toolbar [icon="more-vert"] {
+  padding-right: 0;
+}
+
+paper-dropdown{
+	color: black;
+}
+paper-item{
+	display: block;
+	height: 30px;
+}
+
+paper-fab{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	background-color: #FF5252;
+}
+[main]{
+	background-color: #e3e3e3;
+}
+
+@media screen and (min-width: 896px) {
+  :host {
+    background-color: transparent;
+  }
+  .content {
+    margin: 32px auto;
+    width: 640px;
+  }
+
+:host /deep/ .content{
+	height: 100%;
+}
+
+core-menu{
+	cursor: pointer;
+}
+#headerPanel{
+	background: #e3e3e3;
+}
+
+core-drawer-panel:not([narrow]) #navicon{
+	display: none;
+}
+
+#addNote{
+	background: #000;
+}
+
+[pressed] paper-dropdown{
+	display: block;
 }

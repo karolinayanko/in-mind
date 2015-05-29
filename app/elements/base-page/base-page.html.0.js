@@ -13,14 +13,16 @@
         // an anchor tag. The normal click behavior is stopped to
         // prevent a page refresh, and the href is sent to the router
         // so it can change the current route
-        navigate: function(e, detail, sender) {
-          e.preventDefault();
-          this.fire('change-route', sender.href);
-        },
-        goBack: function(e) {
-          e.preventDefault();
-          this.fire('change-route-back');
-        }
+
+
+        // navigate: function(e, detail, sender) {
+        //   e.preventDefault();
+        //   this.fire('change-route', sender.href);
+        // },
+        // goBack: function(e) {
+        //   e.preventDefault();
+        //   this.fire('change-route-back');
+        // }
+
       });
     })();
-  

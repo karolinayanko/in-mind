@@ -2,104 +2,45 @@
 
 <html><head></head><body><polymer-element name="add-task-page" attributes="" extends="base-page">
 	<template>
-		<style>
-			:host {
-				display: none;
-			}
-		</style>
+		<link rel="stylesheet" href="add-task-page.css">
 
 		<core-header-panel id="headerPanel" fit="" mode="seamed">
 
 			<core-toolbar>
-				<a href="/" on-click="{{goBack}}">
-					<paper-icon-button icon="arrow-back"></paper-icon-button>
+				<a href="/" >
+					<paper-icon-button
+						icon="arrow-back"
+						on-click="{{goBack}}">
+					</paper-icon-button>
 				</a>
-				<div id="title" flex="">{{contactName}}</div>
-				<a href="/" on-click="{{goBack}}">
-					<paper-icon-button icon="check"></paper-icon-button>
-				</a>
+				<div id="title" flex="">Add Note</div>
+					<paper-icon-button
+						icon="check"
+						on-click="{{goBack}}">
+					</paper-icon-button>
 			</core-toolbar>
 
 			<div class="content">
-				<!-- Contact photo area -->
-				<div id="contactPhoto" layout="" horizontal="" center-justified="" end="">
-					<core-icon id="iconEmptyContact" icon="app:person"></core-icon>
-				</div>
+				<!-- Note form -->
+				<div id="noteForm" style="position: relative;">
 
-				<!-- Contact form -->
-				<div id="contactForm" style="position: relative;">
-
-					<a href="#">
-						<paper-fab icon="app:camera-alt"></paper-fab>
-					</a>
-
-					<!-- Name -->
+					<!-- Note Name -->
 					<div class="formRow" layout="" horizontal="" center="">
-						<div class="item item-icon">
-							<core-icon icon="social:person"></core-icon>
-						</div>
-						<paper-input class="item item-input" label="Name" value="{{contactName}}" flex="">
+						<paper-input class="item item-input" label="Notes Name" value="" flex="" floatinglabel>
 						</paper-input>
 					</div>
 
-					<!-- Phone -->
+					<!-- Note content -->
 					<div class="formRow" layout="" horizontal="" center="">
-						<div class="item item-icon">
-							<core-icon icon="app:phone"></core-icon>
-						</div>
-						<paper-input class="item item-input" label="Phone" flex="">
-						</paper-input>
-						<paper-dropdown-menu class="item item-menu">
-							<paper-dropdown class="dropdown" halign="right">
-								<core-menu class="menu" selected="Mobile" valueattr="label">
-									<paper-item label="Mobile">Mobile</paper-item>
-									<paper-item label="Work">Work</paper-item>
-									<paper-item label="Home">Home</paper-item>
-								</core-menu>
-							</paper-dropdown>
-						</paper-dropdown-menu>
-					</div>
-
-					<!-- Email -->
-					<div class="formRow" layout="" horizontal="" center="">
-						<div class="item item-icon">
-							<core-icon icon="mail"></core-icon>
-						</div>
-						<paper-input class="item item-input" label="Email" flex=""></paper-input>
-						<paper-dropdown-menu class="item item-menu">
-							<paper-dropdown class="dropdown" halign="right">
-								<core-menu class="menu" selected="Work" valueattr="label">
-									<paper-item label="Work">Work</paper-item>
-									<paper-item label="Home">Home</paper-item>
-								</core-menu>
-							</paper-dropdown>
-						</paper-dropdown-menu>
-					</div>
-
-					<!-- Address -->
-					<div class="formRow" layout="" horizontal="" center="">
-						<div class="item item-icon">
-							<core-icon icon="room"></core-icon>
-						</div>
-						<paper-input class="item item-input" label="Address" flex=""></paper-input>
-						<paper-dropdown-menu class="item item-menu">
-							<paper-dropdown class="dropdown" halign="right">
-								<core-menu class="menu" selected="Home" valueattr="label">
-									<paper-item label="Work">Work</paper-item>
-									<paper-item label="Home">Home</paper-item>
-								</core-menu>
-							</paper-dropdown>
-						</paper-dropdown-menu>
-					</div>
-
-					<!-- Add note -->
-					<div class="formRow" layout="" horizontal="" center="">
-						<div class="item item-icon">
-							<core-icon icon="add"></core-icon>
-						</div>
-						<paper-input class="item item-input" label="Add note" multiline="" flex="">
+						<paper-input class="item item-input" label="Input yous notes" flex="" multiline floatinglabel>
 						</paper-input>
 					</div>
+
+					<!-- Label -->
+					<div class="formRow" layout="" horizontal="" center="">
+						<paper-input class="item item-input" label="Input label separeted by ','" flex="" floatinglabel></paper-input>
+					</div>
+
 
 				</div>
 			</div>

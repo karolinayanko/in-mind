@@ -11,7 +11,7 @@
 <body unresolved>
 	<template id="app" is="auto-binding">
 		<!-- TODO: Structure of app -->
-		<core-animated-pages id="pages" selected="{{selected}}"
+		<core-pages id="pages" selected="{{selected}}"
 												transitions="cross-fade fade-slide-up fade-scale" fit>
 
 			<section layout vertical>
@@ -31,14 +31,14 @@
 			</section>
 
 			<section layout vertical>
-				<add-task-page class="page" id="add"
+				<add-task-page class="page" id="addNote"
 									cross-fade?="{{largeScreen}}"
 									fade-slide-up?="{{!largeScreen}}"
 									flex>
 				</add-task-page>
 			</section>
 
-		</core-animated-pages>
+		</core-pages>
 
 	</template>
 
