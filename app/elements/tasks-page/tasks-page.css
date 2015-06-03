@@ -30,6 +30,7 @@ paper-fab{
 	bottom: 10px;
 	right: 10px;
 	background-color: #FF5252;
+	z-index: 3;
 }
 [main]{
 	background-color: #e3e3e3;

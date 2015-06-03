@@ -24,10 +24,7 @@ paper-item{
 }
 section{
 	height: 100%;
-	/*background: rebeccapurple;*/
-}
-tasks-page{
-	/*background: yellow;*/
+	background: #e3e3e3;
 }
 
 core-toolbar{

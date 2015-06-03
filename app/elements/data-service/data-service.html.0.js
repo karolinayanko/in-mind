@@ -1,12 +1,14 @@
-function Note(){
+function Note(obj){
 	this.id = Date.now();
-	this.header = "";
-	this.contents = [];
-	this.labels = [];
-	this.timestamp = this.getAddedDate();
+	this.type = "note";
+	this.header = obj ? obj.header : "";
+	this.contents = obj ? obj.contents : [];
+	this.labels = obj ? obj.labels : [];
+	this.timestamp = new Date();
+	this.favorite = obj ? obj.favorite : false;
 }
 
-Note.prototype.getAddedDate = function () {
+Note.prototype.getCreatedDate = function () {
 	var date = new Date(),
 		day = date.getDay(),
 		month = date.getMonth() + 1,
@@ -15,25 +17,63 @@ Note.prototype.getAddedDate = function () {
 	return day + '.' + month + '.' + year;
 }
 
+Note.prototype.setNotificateDate = function () {
+	// body...
+}
+
+function updateData (service){
+	chrome.storage.sync.get('notes', function(data){
+
+		if (!data)
+			return;
+
+		service.datas = data.notes || [];
+
+		console.log('updating data is working');
+	});
+}
 
 Polymer({
 	created: function() {
-      this.datas = [];
-    },
-    datasLoaded: function() {
-      // Make a copy of the loaded data
-      this.datas = this.$.userData.response.slice(0);
-      var note = new Note();
-      console.log(note);
-    },
-    requestFailed: function(){
-    	console.error("Datas was not found.");
-    },
-    setFavorite: function(id, isFavorite) {
-      // no service backend, just log the change
 
-      // console.log("This in service.setFavorite", this);
-      console.log('Favorite changed: ' + id + ", now: " + isFavorite);
+		var service = this;
 
-    }
+		this.datas = [];
+
+		updateData(service);
+
+		console.log("created context ", this);
+
+	},
+	datasLoaded: function() {
+		console.log("data is send")
+	},
+	requestFailed: function(){
+		console.error("Datas was not found.");
+	},
+	setFavorite: function(id, isFavorite) {
+		// no service backend, just log the change
+		var found = this.datas.filter(function(index, el){
+			return el.id == id;
+		});
+
+		if (found && found.length > 0){
+			found[0].favorite = isFavorite;
+		}
+
+		chrome.storage.sync.set({'notes':this.datas});
+
+		console.log('Favorite changed: ' + id + ", now: " + isFavorite);
+
+	},
+	addNote: function(note){
+		this.datas.push(note);
+
+		chrome.storage.sync.set({'notes': this.datas});
+
+		console.log("addNote context ", this);
+
+		updateData(this);
+	}
+
 });

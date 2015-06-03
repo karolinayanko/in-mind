@@ -4,19 +4,19 @@
 	<template>
 		<link rel="stylesheet" href="add-task-page.css">
 
+		<data-service id="service" datas="{{datas}}"></data-service>
+
 		<core-header-panel id="headerPanel" fit="" mode="seamed">
 
 			<core-toolbar>
-				<a href="/" >
-					<paper-icon-button
-						icon="arrow-back"
-						on-click="{{goBack}}">
-					</paper-icon-button>
-				</a>
+				<paper-icon-button
+					icon="arrow-back"
+					on-click="{{goBack}}">
+				</paper-icon-button>
 				<div id="title" flex="">Add Note</div>
 					<paper-icon-button
 						icon="check"
-						on-click="{{goBack}}">
+						on-click="{{saveNote}}">
 					</paper-icon-button>
 			</core-toolbar>
 
@@ -26,19 +26,19 @@
 
 					<!-- Note Name -->
 					<div class="formRow" layout="" horizontal="" center="">
-						<paper-input class="item item-input" label="Notes Name" value="" flex="" floatinglabel>
+						<paper-input class="item item-input" label="Notes Name" value="{{newNote.header}}" flex="" floatinglabel>
 						</paper-input>
 					</div>
 
 					<!-- Note content -->
 					<div class="formRow" layout="" horizontal="" center="">
-						<paper-input class="item item-input" label="Input yous notes" flex="" multiline floatinglabel>
+						<paper-input class="item item-input" label="Input yous notes" flex="" multiline floatinglabel value="{{newNote.contents}}">
 						</paper-input>
 					</div>
 
 					<!-- Label -->
 					<div class="formRow" layout="" horizontal="" center="">
-						<paper-input class="item item-input" label="Input label separeted by ','" flex="" floatinglabel></paper-input>
+						<paper-input class="item item-input" label="Input label separeted by ', '" flex="" floatinglabel value="{{newNote.labels}}"></paper-input>
 					</div>
 
 

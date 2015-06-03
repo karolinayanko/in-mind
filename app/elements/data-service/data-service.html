@@ -9,8 +9,15 @@
 				display: none;
 			}
 		</style>
-		<core-ajax id="userData" url="/api/user-data.json" on-core-response="{{datasLoaded}}" handleas="json" on-core-error="{{requestFailed}}" auto>
-	    </core-ajax>
+		<!-- <core-ajax id="userData"
+			url="/api/user-data.json"
+			on-core-response="{{datasLoaded}}"
+			on-core-error="{{requestFailed}}"
+			handleas="json"
+			auto
+			method="POST"
+			body="{id: 10, header: 'hello', content: [1,1,3]}">
+	    </core-ajax> -->
 	</template>
 	<script src="data-service.html.0.js"></script>
 </polymer-element>

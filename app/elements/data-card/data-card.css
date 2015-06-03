@@ -18,6 +18,7 @@ core-icon-button {
       top: 3px;
       right: 3px;
       color: #636363;
+      z-index: 2;
     }
     :host([favorite]) core-icon-button {
       color: #00BCD4;
@@ -46,10 +47,9 @@ core-icon-button {
 	margin-bottom: 5px;
 	color: rgba(0,0,0,0.85);
 	padding: 4px;
-	/*border: 1px solid #ddd;*/
+	border: 1px solid #ddd;
 	border-radius: 3px;
 	font-size: 12px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 ::content .label:hover{
