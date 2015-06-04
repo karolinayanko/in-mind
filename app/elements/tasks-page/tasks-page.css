@@ -8,6 +8,13 @@ core-header-panel{
 	height: 100%;
 	background: white;
 }
+
+[drawer] core-toolbar{
+	background: url(/app/images/user-wall.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
 core-toolbar{
 	background-color: #0097A7;
 	color: white;
@@ -30,8 +37,21 @@ paper-fab{
 	bottom: 10px;
 	right: 10px;
 	background-color: #FF5252;
-	z-index: 3;
+	z-index: 4;
 }
+
+paper-fab-menu{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 220px;
+}
+paper-fab-menu [mini]{
+	opacity: 1 !important;
+  	position: relative;
+}
+
 [main]{
 	background-color: #e3e3e3;
 }
@@ -51,6 +71,9 @@ paper-fab{
 
 core-menu{
 	cursor: pointer;
+}
+core-icon{
+	margin-right: 10px;
 }
 #headerPanel{
 	background: #e3e3e3;

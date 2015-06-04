@@ -18,6 +18,17 @@
     "polymer": "Polymer/polymer#0.5.5",
     "paper-elements": "Polymer/paper-elements#0.5.5",
     "core-scaffold": "Polymer/core-scaffold#0.5.5",
-    "core-pages": "Polymer/core-pages#^0.5"
+    "core-pages": "Polymer/core-pages#^0.5",
+    "google-signin": "GoogleWebComponents/google-signin#~1.0.0",
+    "paper-date-picker": "~0.1.5",
+    "paper-fab-menu": "faizmalkani/paper-fab-menu#~1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.5",
+    "paper-ripple": "^0.5",
+    "polymer": "0.5.5",
+    "font-roboto": "^0.5.5",
+    "core-icons": "^0.5",
+    "core-icon": "^0.5"
   }
 }

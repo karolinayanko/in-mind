@@ -6,7 +6,11 @@ Polymer({
 	addNewNote: function(){
 		var pages = document.querySelector('#pages');
 		pages.selected = 2;
-  }
+	},
+	showNote: function(){
+		var pages = document.querySelector('#pages');
+		pages.selected = 1;
+	}
 });
 
 

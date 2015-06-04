@@ -1,45 +1,35 @@
 Polymer({
   publish: {
-    notes: null
-  },
-  ready: function(){
-
-    this.newNote = {
+    newNote: {
       header: "",
       id: Date.now(),
       type: "note",
-      contents: [],
+      contents: "",
       labels: []
     }
-
-  },
-  updateModel: function(){
-
   },
   willPrepare: function() {
     this.super();
     // Reset the scroller so every time the user comes to the add page
     // they see the top of the form
     this.$.headerPanel.scroller.scrollTop = 0;
-
   },
-
-  goBack: function(){
+  goBack: function(event, detail, sender){
   	var pages = document.querySelector('#pages');
-
   	pages.selected = 0;
   },
-
   saveNote: function(event, detail, sender){
     var note = sender.templateInstance.model.newNote;
 
-    console.log("Note Labels is: ", note.labels);
+    console.log("Note Labels typeOf: ", typeof note.labels);
 
-    note.labels.typeOf === "string" ? note.labels = note.labels.split(', ') : note.labels;
+    typeof note.labels === "string" ? note.labels = note.labels.split(', ') : note.labels;
 
-    note.contents ? note.contents = [note.contents] : note.contents = [];
-
-    console.log("New Note ", note)
+    note.contents ? note.contents = note.contents : note.contents = "";
+    if(note.type == "notes"){
+      note = new Note(note);
+      console.log("New Note ", note)
+    }
 
     this.$.service.addNote(note);
 

@@ -14,19 +14,18 @@
 			<data-card
 				favorite?="{{data.favorite}}"
 				on-favorite-tap="{{handleFavorite}}"
+				on-remove-tap="{{handleRemove}}"
 				hidden?="{{show == 'favorites' && !data.favorite}}">
 				<h2 class="header">
 					{{data.header}}
 				</h2>
-				<template repeat="{{content in data.contents}}">
-					<p class="content">{{content}}</p>
-				</template>
+				<p class="content">{{data.contents}}</p>
 				<div>
 					<template repeat="{{label in data.labels}}">
 						<span class="label">{{label}}</span>
 					</template>
-					<time class="timestamp" is="relative-time" datetime="{{data.timestamp}}">{{data.timestamp}}</time>
 				</div>
+				<time class="timestamp" is="relative-time" datetime="{{data.timestamp}}">{{data.timestamp}}</time>
 			</data-card>
 		</template>
 

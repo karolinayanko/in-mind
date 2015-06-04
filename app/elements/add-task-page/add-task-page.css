@@ -21,3 +21,7 @@ core-toolbar{
 core-toolbar a{
 	color: white;
 }
+
+section{
+	background: #e3e3e3;
+}

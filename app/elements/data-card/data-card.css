@@ -13,16 +13,26 @@
 	box-sizing: border-box;
 }
 
-core-icon-button {
+header {
+	padding-right: 80px;
+}
+
+core-icon-button{
       position: absolute;
       top: 3px;
-      right: 3px;
-      color: #636363;
       z-index: 2;
+      color: #636363;
+}
+#favicon {
+      right: 40px;
     }
-    :host([favorite]) core-icon-button {
+    :host([favorite]) #favicon {
       color: #00BCD4;
     }
+
+#remove{
+	right: 3px;
+}
 
 ::content .header{
 	margin: 0 0 10px;
@@ -57,6 +67,13 @@ core-icon-button {
 }
 
 ::content time{
-	display: block;
 	font-size: 12px;
+}
+
+.remind:hover{
+	 color: #00BCD4;
+}
+
+paper-date-picker-dialog{
+	display: block;
 }

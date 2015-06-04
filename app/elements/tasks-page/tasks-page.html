@@ -25,6 +25,14 @@
 						<core-icon icon="favorite-outline"></core-icon>
 							Favorites
 					</core-item>
+					<core-item noink="" name="remove">
+						<core-icon icon="delete"></core-icon>
+							Remove all notes
+					</core-item>
+					<core-item noink="" name="logout" disable>
+						<core-icon icon="exit-to-app"></core-icon>
+							Logout
+					</core-item>
 				</core-menu>
 
 			</core-header-panel>
@@ -50,24 +58,28 @@
 
 					</core-toolbar>
 					<div class="content">
-
 						<data-list id="dataList" show="all"></data-list>
 
 					</div>
 				</core-header-panel>
 
-				<!-- Add contact -->
-					<paper-fab icon="add" noink="" on-tap="{{addNewNote}}">
+				<!-- Add note -->
+					<!-- <paper-fab icon="add" noink="" on-tap="{{addNewNote}}">
+					</paper-fab> -->
+					<div layout vertical center>
+						<paper-fab-menu>
+					        <paper-fab mini icon="note-add" on-tap="{{addNewNote}}"></paper-fab>
+					        <paper-fab mini icon="list"></paper-fab>
+					        <paper-fab mini icon="alarm"></paper-fab>
+					        <paper-fab trigger icon="add"></paper-fab>
+					    </paper-fab-menu>
 
-						</x-trigger>
-					</paper-fab>
+					</div>
 			</div>
 		</core-drawer-panel>
 	</template>
 	<script src="tasks-page.html.0.js"></script>
 </polymer-element>
-
-
 
 
 </body></html>

@@ -4,7 +4,9 @@
  * @see http://developer.chrome.com/apps/app.runtime.html
  * @see http://developer.chrome.com/apps/app.window.html
  */
-chrome.app.runtime.onLaunched.addListener(function(launchData) {
+
+
+function launch() {
   chrome.app.window.create(
     'app/index.html',
     {
@@ -16,4 +18,11 @@ chrome.app.runtime.onLaunched.addListener(function(launchData) {
       // bounds: {width: 800, height: 600}
     }
   );
+}
+
+chrome.app.runtime.onLaunched.addListener(launch);
+
+chrome.notifications.onClicked.addListener(function() {
+  launch();
 });
+

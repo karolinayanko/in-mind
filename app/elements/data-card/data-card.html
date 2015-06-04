@@ -18,10 +18,15 @@
 		</header>
 
 		<core-icon-button
-      id="favicon"
-      icon="favorite"
-      on-tap="{{favoriteNote}}" >
-    </core-icon-button>
+	      id="favicon"
+	      icon="favorite"
+	      on-tap="{{favoriteNote}}" >
+	    </core-icon-button>
+	    <core-icon-button
+	      id="remove"
+	      icon="delete"
+	      on-tap="{{removeNote}}" >
+	    </core-icon-button>
 
 		<section>
 			<content select="p"></content>
@@ -29,11 +34,20 @@
 
 		<footer>
 
-			<div class="label">
-				<content></content>
+			<div class="labels">
+				<span class="label">
+					<content></content>
+				</span>
 			</div>
 
-			<content select="time"></content>
+			<content select="time" left></content>
+
+			<!-- <paper-button class="remind" on-click="{{openPicker}}">
+			  <core-icon icon="alarm"></core-icon>
+			  remind
+			</paper-button> -->
+
+
 
 		</footer>
 
