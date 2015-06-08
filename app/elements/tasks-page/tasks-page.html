@@ -8,9 +8,7 @@
 </head><body><polymer-element name="tasks-page" extends="base-page" attributes="datas">
 	<template>
 		<link rel="stylesheet" href="tasks-page.css">
-
 		<core-drawer-panel id="drawerPanel" narrow="">
-
 			<!-- Drawer -->
 			<core-header-panel drawer="" mode="seamed">
 				<core-toolbar class="tall">
@@ -34,9 +32,7 @@
 							Logout
 					</core-item>
 				</core-menu>
-
 			</core-header-panel>
-
 			<!-- Main -->
 			<div main="" layout="" vertical="">
 				<core-header-panel id="headerPanel" mode="seamed" flex="">
@@ -44,7 +40,6 @@
 						<paper-icon-button icon="menu" id="navicon" core-drawer-toggle="">
 						</paper-icon-button>
 						<div id="title" flex="">InMind</div>
-
 						<paper-menu-button id="menuBtn" noink="">
 							<paper-icon-button icon="more-vert" noink=""></paper-icon-button>
 							<paper-dropdown class="dropdown" halign="right">
@@ -55,17 +50,11 @@
 								</core-menu>
 							</paper-dropdown>
 						</paper-menu-button>
-
 					</core-toolbar>
 					<div class="content">
 						<data-list id="dataList" show="all"></data-list>
-
 					</div>
 				</core-header-panel>
-
-				<!-- Add note -->
-					<!-- <paper-fab icon="add" noink="" on-tap="{{addNewNote}}">
-					</paper-fab> -->
 					<div layout vertical center>
 						<paper-fab-menu>
 					        <paper-fab mini icon="note-add" on-tap="{{addNewNote}}"></paper-fab>
@@ -73,13 +62,10 @@
 					        <paper-fab mini icon="alarm"></paper-fab>
 					        <paper-fab trigger icon="add"></paper-fab>
 					    </paper-fab-menu>
-
 					</div>
 			</div>
 		</core-drawer-panel>
 	</template>
 	<script src="tasks-page.html.0.js"></script>
 </polymer-element>
-
-
 </body></html>

@@ -2,21 +2,17 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="../base-page/base-page.html">
 
-
 </head><body><polymer-element name="data-card" extends="base-page">
 	<template>
-
 		<link rel="stylesheet" href="data-card.css">
 		<style>
 			.header {
 				margin: 0;
 			}
 		</style>
-
 		<header>
 			<content select="h2"></content>
 		</header>
-
 		<core-icon-button
 	      id="favicon"
 	      icon="favorite"
@@ -27,31 +23,22 @@
 	      icon="delete"
 	      on-tap="{{removeNote}}" >
 	    </core-icon-button>
-
 		<section>
 			<content select="p"></content>
 		</section>
-
 		<footer>
-
 			<div class="labels">
 				<span class="label">
 					<content></content>
 				</span>
 			</div>
-
 			<content select="time" left></content>
 
-			<!-- <paper-button class="remind" on-click="{{openPicker}}">
+			<paper-button class="remind" on-click="{{openPicker}}">
 			  <core-icon icon="alarm"></core-icon>
 			  remind
-			</paper-button> -->
-
-
-
+			</paper-button>
 		</footer>
-
-
 	</template>
 	<script src="data-card.html.0.js"></script>
 </polymer-element></body></html>

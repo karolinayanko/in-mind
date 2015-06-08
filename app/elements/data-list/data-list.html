@@ -6,10 +6,7 @@
 <polymer-element name="data-list" extends="base-page">
 	<template>
 		<link rel="stylesheet" href="data-list.css">
-
 		<data-service id="service" datas="{{datas}}"></data-service>
-
-
 		<template repeat="{{data in datas}}">
 			<data-card
 				favorite?="{{data.favorite}}"
@@ -28,7 +25,6 @@
 				<time class="timestamp" is="relative-time" datetime="{{data.timestamp}}">{{data.timestamp}}</time>
 			</data-card>
 		</template>
-
 	</template>
 	<script src="data-list.html.0.js"></script>
 </polymer-element>

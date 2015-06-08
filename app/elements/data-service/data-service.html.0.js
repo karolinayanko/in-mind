@@ -1,13 +1,43 @@
-function Note(obj){
+function Item(obj){
 	this.id = Date.now();
-	this.type = "note";
+	this.type = "";
 	this.header = obj ? obj.header : "";
-	this.contents = obj ? obj.contents : "";
 	this.labels = obj ? obj.labels : [];
 	this.creatingDate = new Date();
 	this.timestamp = dateToShortString(this.creatingDate);
 	this.favorite = obj ? obj.favorite : false;
 }
+
+function Note(obj){
+	Item.apply(this, arguments);
+	this.type = "note";
+	this.contents = obj ? obj.contents : "";
+}
+Note.prototype = Object.create(Item.prototype);
+
+function Notification(obj){
+	Item.apply(this, arguments);
+	this.type = "notify";
+	this.contents = obj ? obj.contents : "";
+}
+Notification.prototype = Object.create(Item.prototype);
+
+function Task(obj){
+	Item.apply(this, arguments);
+	this.type = "Task";
+	this.contents = obj ? obj.contents : [];
+}
+Task.prototype = Object.create(Item.prototype);
+
+var obj = {header: "",
+      id: Date.now(),
+      type: "note",
+      contents: "",
+      labels: []}
+
+var note = new Note(obj);
+var notify = new Notification(obj);
+console.log(note, notify);
 
 function dateToShortString (date) {
 	var day = date.getDay(),
